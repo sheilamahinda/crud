@@ -1,0 +1,10 @@
+from django.db import models
+
+# Create your models here.
+class People(models.Model):
+    name=models.CharField(max_length=50, blank=False, null=False)
+    school=models.CharField(max_length=50, blank=False, null=True)
+    email=models.EmailField(null=True)
+
+    def __str__(self):
+        return self.name
